@@ -1,3 +1,6 @@
+;#2011 Probe feedrate - slow
+;#2012 Probe feedrate - fast
+
 G04 P0
 M5
 
@@ -29,7 +32,7 @@ G91 G01 Z-2 F#2011
 M102
 G04 P0
 
-#402=#400
-#403=1
-#404=-#870
+#402=#400;Save the Z axis zero offset of the coordinate system
+#403=1;Set the automatic correction coordinate system flag
+#404=-#870;Save the thickness of the tool setting block. If the thickness parameter of the tool setting block is 0 before, the system will use this variable to modify the thickness parameter of the tool setting block to complete the first tool setting
 G00 G53 Z0. F#578
